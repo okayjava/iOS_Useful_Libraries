@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ib Calendar Data Source-->
+        <!--Calendar Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,61 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sxr-By-i4R" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zc-h5-8tn" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="8" y="60" width="359" height="240"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YI0-JG-B0e">
-                                    <size key="itemSize" width="86" height="98"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DayCell" id="G1y-Iq-X82" customClass="DayCell" customModule="Calendar" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="98"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="86" height="98"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P7c-vP-7cD">
-                                                    <rect key="frame" x="27" y="41.5" width="33" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="P7c-vP-7cD" firstAttribute="centerX" secondItem="G1y-Iq-X82" secondAttribute="centerX" id="c1y-gg-SnW"/>
-                                            <constraint firstItem="P7c-vP-7cD" firstAttribute="centerY" secondItem="G1y-Iq-X82" secondAttribute="centerY" id="fF2-Jb-Pi4"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dateLabel" destination="P7c-vP-7cD" id="94v-fL-ZgQ"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Oo8-Pu-U4d"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cvh-GG-JO4"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7Gq-u7-Flb"/>
-                                    <outlet property="ibCalendarDataSource" destination="BYZ-38-t0r" id="7Dz-03-mvh"/>
-                                    <outlet property="ibCalendarDelegate" destination="BYZ-38-t0r" id="SKE-nG-iJi"/>
+                                    <outlet property="calendarDelegate" destination="BYZ-38-t0r" id="L67-wU-MSy"/>
                                 </connections>
-                            </collectionView>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MJ4-PD-sQb">
+                                <rect key="frame" x="105" y="382" width="165" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="MonthView"/>
+                                    <segment title="WeekView"/>
+                                </segments>
+                                <connections>
+                                    <action selector="viewModeChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="8Y3-gg-1eA"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Sxr-By-i4R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2le-gW-9cW"/>
-                            <constraint firstItem="Sxr-By-i4R" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7MK-vi-UyE"/>
-                            <constraint firstItem="Sxr-By-i4R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rwd-vW-Jk5"/>
-                            <constraint firstItem="Sxr-By-i4R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YWK-yw-z04"/>
+                            <constraint firstItem="7Zc-h5-8tn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="8R5-BV-48t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Zc-h5-8tn" secondAttribute="trailing" constant="8" id="JV4-dL-TDN"/>
+                            <constraint firstItem="7Zc-h5-8tn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="lIb-OV-tD6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="calendarMode" destination="MJ4-PD-sQb" id="Gnf-BD-YR5"/>
+                        <outlet property="calendarView" destination="7Zc-h5-8tn" id="g3H-dU-oCq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="6" y="155"/>
         </scene>
     </scenes>
 </document>
