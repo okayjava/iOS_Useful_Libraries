@@ -18,7 +18,7 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
     
     @IBAction func startColoring(_ sender: Any) {
         do {
-            try socket.connect(toHost: "192.168.1.73", onPort: 3000)
+            try socket.connect(toHost: serverAddr, onPort: port)
             socket.readData(withTimeout: 10000, tag: 1)
         }
         catch let error {
@@ -36,6 +36,7 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
         socket = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.main)
     }
     
+    
     func socket(_ sock: GCDAsyncSocket, didReadPartialDataOfLength partialLength: UInt, tag: Int) {
         print("didReadPartialDataOfLength")
     }
@@ -43,7 +44,7 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
     func socket(_ sock: GCDAsyncSocket, didConnectTo url: URL) {
         print("didConnectTo :", url)
     }
-    
+        
     func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
         if let root = try? JSONSerialization.jsonObject(with: data, options: .init(rawValue: 0)),
             let color = root as? [String: Float],
@@ -52,7 +53,6 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
             print("red : \(red), green : \(green), blue : \(blue)")
             self.view.backgroundColor = UIColor.init(red: CGFloat(red/256), green: CGFloat(green/256), blue: CGFloat(blue/256), alpha: 1.0)
         }
-        
         socket.readData(withTimeout: 10000, tag: 1)
     }
 

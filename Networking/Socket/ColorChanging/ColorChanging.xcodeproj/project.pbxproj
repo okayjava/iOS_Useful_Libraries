@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C6C7D6220D9A60B000C4102 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6C7D6120D9A60B000C4102 /* Constant.swift */; };
 		2CA822E520C6955200EA16C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA822E420C6955200EA16C8 /* AppDelegate.swift */; };
 		2CA822E720C6955200EA16C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA822E620C6955200EA16C8 /* ViewController.swift */; };
 		2CA822EA20C6955200EA16C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA822E820C6955200EA16C8 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		08A2204A80C803D8AE86C5EF /* Pods-ColorChanging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorChanging.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColorChanging/Pods-ColorChanging.release.xcconfig"; sourceTree = "<group>"; };
+		2C6C7D6120D9A60B000C4102 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = /Users/wannabewize/Projects/Lecture/iOS_Libraries/Networking/Socket/ColorChanging/ColorChanging/Constant.swift; sourceTree = "<absolute>"; };
 		2CA822E120C6955200EA16C8 /* ColorChanging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorChanging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA822E420C6955200EA16C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA822E620C6955200EA16C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		2CA822E320C6955200EA16C8 /* ColorChanging */ = {
 			isa = PBXGroup;
 			children = (
+				2C6C7D6120D9A60B000C4102 /* Constant.swift */,
 				2CA822E420C6955200EA16C8 /* AppDelegate.swift */,
 				2CA822E620C6955200EA16C8 /* ViewController.swift */,
 				2CA822E820C6955200EA16C8 /* Main.storyboard */,
@@ -202,6 +205,7 @@
 			files = (
 				2CA822E720C6955200EA16C8 /* ViewController.swift in Sources */,
 				2CA822E520C6955200EA16C8 /* AppDelegate.swift in Sources */,
+				2C6C7D6220D9A60B000C4102 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
