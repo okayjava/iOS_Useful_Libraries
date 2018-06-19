@@ -1,6 +1,3 @@
-Pods/
-Podfile.lock
-
 # Created by https://www.gitignore.io/api/xcode
 
 ### Xcode ###
@@ -38,6 +35,34 @@ xcuserdata/
 
 # End of https://www.gitignore.io/api/xcode
 # Created by https://www.gitignore.io/api/node
+
+# Created by https://www.gitignore.io/api/carthage
+
+
+# Created by https://www.gitignore.io/api/cocoapods
+
+### CocoaPods ###
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
+Podfile.lock
+
+
+# End of https://www.gitignore.io/api/cocoapods
+
+
+### Carthage ###
+Carthage
+Cartfile.resolved
+Carthage/Checkouts
+Carthage/Build
+
+
+# End of https://www.gitignore.io/api/carthage
+
 
 ### Node ###
 # Logs
@@ -101,3 +126,4 @@ typings/
 
 
 # End of https://www.gitignore.io/api/node
+

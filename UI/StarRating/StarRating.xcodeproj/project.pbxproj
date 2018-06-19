@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15025261200278430FD3F2B4 /* Pods_StarRating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC34813294C2688BD696E52 /* Pods_StarRating.framework */; };
+		2C31177F20D8FC0C004FBC67 /* Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C31177E20D8FC0C004FBC67 /* Cosmos.framework */; };
+		2C31178020D8FC0C004FBC67 /* Cosmos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C31177E20D8FC0C004FBC67 /* Cosmos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C31178720D8FF8A004FBC67 /* heart_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C31178620D8FF8A004FBC67 /* heart_outline.png */; };
+		2C31178920D8FF8F004FBC67 /* heart_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C31178820D8FF8F004FBC67 /* heart_filled.png */; };
 		2C5EA5E120CFCA95007DEB4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5EA5E020CFCA95007DEB4F /* AppDelegate.swift */; };
 		2C5EA5E320CFCA95007DEB4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5EA5E220CFCA95007DEB4F /* ViewController.swift */; };
 		2C5EA5E620CFCA95007DEB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5EA5E420CFCA95007DEB4F /* Main.storyboard */; };
@@ -15,7 +18,24 @@
 		2C5EA5EB20CFCA97007DEB4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5EA5E920CFCA97007DEB4F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2C31178120D8FC0C004FBC67 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C31178020D8FC0C004FBC67 /* Cosmos.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2C31177E20D8FC0C004FBC67 /* Cosmos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cosmos.framework; path = Carthage/Build/iOS/Cosmos.framework; sourceTree = "<group>"; };
+		2C31178620D8FF8A004FBC67 /* heart_outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_outline.png; sourceTree = "<group>"; };
+		2C31178820D8FF8F004FBC67 /* heart_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_filled.png; sourceTree = "<group>"; };
 		2C5EA5DD20CFCA95007DEB4F /* StarRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5EA5E020CFCA95007DEB4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C5EA5E220CFCA95007DEB4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15025261200278430FD3F2B4 /* Pods_StarRating.framework in Frameworks */,
+				2C31177F20D8FC0C004FBC67 /* Cosmos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +72,7 @@
 		2C5EA5D420CFCA95007DEB4F = {
 			isa = PBXGroup;
 			children = (
+				2C31177E20D8FC0C004FBC67 /* Cosmos.framework */,
 				2C5EA5DF20CFCA95007DEB4F /* StarRating */,
 				2C5EA5DE20CFCA95007DEB4F /* Products */,
 				05469620008C36F1CF2CB64D /* Pods */,
@@ -70,6 +91,8 @@
 		2C5EA5DF20CFCA95007DEB4F /* StarRating */ = {
 			isa = PBXGroup;
 			children = (
+				2C31178820D8FF8F004FBC67 /* heart_filled.png */,
+				2C31178620D8FF8A004FBC67 /* heart_outline.png */,
 				2C5EA5E020CFCA95007DEB4F /* AppDelegate.swift */,
 				2C5EA5E220CFCA95007DEB4F /* ViewController.swift */,
 				2C5EA5E420CFCA95007DEB4F /* Main.storyboard */,
@@ -95,11 +118,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C5EA5EF20CFCA97007DEB4F /* Build configuration list for PBXNativeTarget "StarRating" */;
 			buildPhases = (
-				AD969AFE14421FC5921B4331 /* [CP] Check Pods Manifest.lock */,
 				2C5EA5D920CFCA95007DEB4F /* Sources */,
 				2C5EA5DA20CFCA95007DEB4F /* Frameworks */,
 				2C5EA5DB20CFCA95007DEB4F /* Resources */,
-				22A03519F87EED2E889E1E14 /* [CP] Embed Pods Frameworks */,
+				2C31178120D8FC0C004FBC67 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,52 +170,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C31178720D8FF8A004FBC67 /* heart_outline.png in Resources */,
 				2C5EA5EB20CFCA97007DEB4F /* LaunchScreen.storyboard in Resources */,
 				2C5EA5E820CFCA97007DEB4F /* Assets.xcassets in Resources */,
 				2C5EA5E620CFCA95007DEB4F /* Main.storyboard in Resources */,
+				2C31178920D8FF8F004FBC67 /* heart_filled.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		22A03519F87EED2E889E1E14 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-StarRating/Pods-StarRating-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarRating/Pods-StarRating-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD969AFE14421FC5921B4331 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StarRating-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C5EA5D920CFCA95007DEB4F /* Sources */ = {
@@ -347,6 +332,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = StarRating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,6 +354,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = StarRating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -11,9 +11,19 @@ import Cosmos
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var starRating: CosmosView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        starRating.didTouchCosmos = { value in
+            print("didTouchCosmos :", value)
+        }
+
+        starRating.didFinishTouchingCosmos = { (value: Double) -> () in
+            print("Value changed :", value)
+        }
+        
+        starRating.rating
     }
 
     override func didReceiveMemoryWarning() {
