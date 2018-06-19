@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>WebSocket Test</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<h1>WebSocket Chat Service</h1>
+
+<ul id="messages">
+</ul>
+
+<form id="chatInput" action="./" class="form-inline">
+   <input type="text" id="userInput" class="form-control" />
+   <input type="submit" id="sendButton" class="btn btn-default" value="보내기" />
+</form>
+
+<script language="javascript" type="text/javascript">
+
+   var wsUri = "ws://127.0.0.1:8080/";
+   var output;
+
+   function init() {
+      websocket = new WebSocket(wsUri);
+      websocket.onopen = function (evt) { onOpen(evt) };
+      websocket.onclose = function (evt) { onClose(evt) };
+      websocket.onmessage = function (evt) { onMessage(evt) };
+      websocket.onerror = function (evt) { onError(evt) };
+   }
+
+   function onOpen(evt) {
+      $('#messages').append($('<li>').text("CONNECTED"));
+   }
+
+   function onError(evt) {
+      alert('Error : ' + evt.message);
+   }
+
+   function onClose(evt) {
+      $('#messages').append($('<li>').text("DISCONNECTED"));
+   }
+   function onMessage(evt) {
+      console.log('message receive', data);
+      const message = ' >> ' + evt.data.message;
+      $('#messages').append($('<li>').text(message));
+   }
+
+   function doSend(message) {
+      writeToScreen("SENT: " + message);
+      websocket.send(message);
+   }
+
+   $("#chatInput").submit(function () {
+      // 사용자가 입력한 내용을 서버로 이벤트 발생
+      var message = $("#userInput").val();
+      websocket.send({msg:message});
+      $("#userInput").val("")
+      console.log('message :', message);
+      return false;
+   });
+</script>
+</body>
+</html>
