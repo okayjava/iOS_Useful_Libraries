@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		079EE125BE779C330714F477 /* Pods-CocoapodsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodsExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoapodsExampleTests/Pods-CocoapodsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1687899C4B8A7D674832FDAD /* Pods-CocoapodsExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodsExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoapodsExampleUITests/Pods-CocoapodsExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2C3116B720D8DC94004FBC67 /* sh.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sh.jpeg; sourceTree = "<group>"; };
+		2C3116B720D8DC94004FBC67 /* sh.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sh.jpeg; path = ../../CarthageExample/CarthageExample/sh.jpeg; sourceTree = "<group>"; };
 		2C9BE78620D583F30091E1DE /* CocoapodsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9BE78920D583F30091E1DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9BE78B20D583F30091E1DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		2C9BE7A520D583F40091E1DE /* CocoapodsExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoapodsExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9BE7A920D583F40091E1DE /* CocoapodsExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoapodsExampleUITests.swift; sourceTree = "<group>"; };
 		2C9BE7AB20D583F40091E1DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C9BE7B920D5897C0091E1DE /* pearl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pearl.jpg; sourceTree = "<group>"; };
+		2C9BE7B920D5897C0091E1DE /* pearl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pearl.jpg; path = ../../CarthageExample/CarthageExample/pearl.jpg; sourceTree = "<group>"; };
 		377757CBE0AEBB6A254CB553 /* Pods-CocoapodsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoapodsExample/Pods-CocoapodsExample.debug.xcconfig"; sourceTree = "<group>"; };
 		3A66F9D625FD98C99922B868 /* Pods-CocoapodsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodsExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoapodsExample/Pods-CocoapodsExample.release.xcconfig"; sourceTree = "<group>"; };
 		6621C3F532BCECD2AC1AA7A6 /* Pods_CocoapodsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoapodsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
