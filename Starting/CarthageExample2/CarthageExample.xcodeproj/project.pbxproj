@@ -12,10 +12,10 @@
 		2C3116CB20D8DE0F004FBC67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3116C920D8DE0F004FBC67 /* Main.storyboard */; };
 		2C3116CD20D8DE10004FBC67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3116CC20D8DE10004FBC67 /* Assets.xcassets */; };
 		2C3116D020D8DE10004FBC67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3116CE20D8DE10004FBC67 /* LaunchScreen.storyboard */; };
-		2C3116E720D8E796004FBC67 /* pearl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C3116E520D8E796004FBC67 /* pearl.jpg */; };
-		2C3116E820D8E796004FBC67 /* sh.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C3116E620D8E796004FBC67 /* sh.jpeg */; };
 		2C3116EA20D8E7C0004FBC67 /* FaceAware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3116E920D8E7C0004FBC67 /* FaceAware.framework */; };
 		2C3116EB20D8E7C0004FBC67 /* FaceAware.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3116E920D8E7C0004FBC67 /* FaceAware.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C31171C20D8EEC4004FBC67 /* pearl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C31171A20D8EEC4004FBC67 /* pearl.jpg */; };
+		2C31171D20D8EEC4004FBC67 /* sh.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C31171B20D8EEC4004FBC67 /* sh.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,9 +40,9 @@
 		2C3116CC20D8DE10004FBC67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3116CF20D8DE10004FBC67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C3116D120D8DE10004FBC67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C3116E520D8E796004FBC67 /* pearl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pearl.jpg; path = ../../CarthageExample1/CarthageExample/pearl.jpg; sourceTree = "<group>"; };
-		2C3116E620D8E796004FBC67 /* sh.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sh.jpeg; path = ../../CarthageExample1/CarthageExample/sh.jpeg; sourceTree = "<group>"; };
 		2C3116E920D8E7C0004FBC67 /* FaceAware.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceAware.framework; path = Carthage/Build/iOS/FaceAware.framework; sourceTree = "<group>"; };
+		2C31171A20D8EEC4004FBC67 /* pearl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pearl.jpg; sourceTree = "<group>"; };
+		2C31171B20D8EEC4004FBC67 /* sh.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sh.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 		2C3116C420D8DE0F004FBC67 /* CarthageExample */ = {
 			isa = PBXGroup;
 			children = (
-				2C3116E520D8E796004FBC67 /* pearl.jpg */,
-				2C3116E620D8E796004FBC67 /* sh.jpeg */,
+				2C31171A20D8EEC4004FBC67 /* pearl.jpg */,
+				2C31171B20D8EEC4004FBC67 /* sh.jpeg */,
 				2C3116C520D8DE0F004FBC67 /* AppDelegate.swift */,
 				2C3116C720D8DE0F004FBC67 /* ViewController.swift */,
 				2C3116C920D8DE0F004FBC67 /* Main.storyboard */,
@@ -148,8 +148,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C3116E820D8E796004FBC67 /* sh.jpeg in Resources */,
-				2C3116E720D8E796004FBC67 /* pearl.jpg in Resources */,
+				2C31171D20D8EEC4004FBC67 /* sh.jpeg in Resources */,
+				2C31171C20D8EEC4004FBC67 /* pearl.jpg in Resources */,
 				2C3116D020D8DE10004FBC67 /* LaunchScreen.storyboard in Resources */,
 				2C3116CD20D8DE10004FBC67 /* Assets.xcassets in Resources */,
 				2C3116CB20D8DE0F004FBC67 /* Main.storyboard in Resources */,
