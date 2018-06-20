@@ -19,7 +19,7 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
     @IBAction func startColoring(_ sender: Any) {
         do {
             try socket.connect(toHost: serverAddr, onPort: port)
-            socket.readData(withTimeout: 10000, tag: 1)
+            socket.readData(withTimeout: -1, tag: 1) // no-timeout
         }
         catch let error {
             print("Error : \(error)")
@@ -44,6 +44,10 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
     func socket(_ sock: GCDAsyncSocket, didConnectTo url: URL) {
         print("didConnectTo :", url)
     }
+    
+    func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
+        print("Disconnected. error : \(err?.localizedDescription)")
+    }
         
     func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
         if let root = try? JSONSerialization.jsonObject(with: data, options: .init(rawValue: 0)),
@@ -53,7 +57,7 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
             print("red : \(red), green : \(green), blue : \(blue)")
             self.view.backgroundColor = UIColor.init(red: CGFloat(red/256), green: CGFloat(green/256), blue: CGFloat(blue/256), alpha: 1.0)
         }
-        socket.readData(withTimeout: 10000, tag: 1)
+        socket.readData(withTimeout: -1, tag: 1) // no-timeout
     }
 
     override func didReceiveMemoryWarning() {
