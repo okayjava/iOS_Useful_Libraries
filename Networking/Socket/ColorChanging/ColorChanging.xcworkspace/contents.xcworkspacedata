@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/wannabewize/Projects/Lecture/iOS_Libraries/Networking/Socket/ColorChanging/ColorChanging/Constant.swift">
-   </FileRef>
-   <FileRef
       location = "group:ColorChanging.xcodeproj">
    </FileRef>
    <FileRef
